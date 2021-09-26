@@ -1,0 +1,61 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    font-family:Arial;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first_task{
+    margin-left: 20px;
+    padding-right: 100px;
+    flex-direction:column;
+    justify-content: left;
+}
+
+.group{
+ margin:10px 0 15px 0;
+}
+
+input{
+    margin-top:10px;
+    width: 160px;
+    font-size: 25px;
+}
+label {
+    margin-top: 2%;  
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+button {
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    font-size: 25px;
+    margin-top: 3rem;
+   
+}
+.button:hover {
+    opacity: 0.80;
+    font-weight: bold;
+    transform: scale(1.1) translate(20px, 0);
+    transition: .3s;
+}  
+.button:not(hover) {
+    transition: .5s;
+}
+
+p{
+    font-size: 25px;
+    font-weight: bold;
+}
+#cnvs{
+    border: 1px solid black;
+    margin: auto;
+    background: #ead9ce;
+    margin-bottom: 5%;
+}

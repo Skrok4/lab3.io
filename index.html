@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Lr3 </title>
+<link rel="stylesheet" href="style.css"> 
+<script src="script.js" defer></script>
+</head>
+<body>
+    <div class="first_task">
+
+    <label for="elMin">Введіть X мінімальне:</label>
+    <div class="group">
+    <input id="elMin" type="number" placeholder="Min x">
+</div>
+
+    <label for="elMax">Введіть Х максимальне:</label>
+<div class="group">
+    <input id="elMax" type="number" placeholder="Max x">
+</div>
+
+    <label for="elStep">Введіть крок dx:</label>
+<div class="group">
+    <input id="elStep" type="number" placeholder="Введіть крок:">
+</div>
+<div class="button">
+    <button onclick="Check1();">Розрахувати табулювання з текстових полів</button>
+</div>
+<div class="button">
+    <button onclick="Check2();">Розрахувати табулювання з prompt</button>
+</div>
+</div>
+<div class="">
+    <p>y = 4x^3×((x - 1)^2)^0.333</p>
+    <canvas id="cnvs" width="700px" height="500px">Your browser is not supported canvas, sorry.</canvas>
+</div>
+</body>
+</html>
