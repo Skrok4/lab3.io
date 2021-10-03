@@ -1,4 +1,3 @@
-
 function Check(){
   if ( document.getElementById("elMin").value == ""){
     alert ( "Будь ласка заповніть поле Min." );
