@@ -14,26 +14,31 @@ else if ( ( document.getElementById("elStep").value  == "") ){
   else 
 {
   var elMin = 1*document.getElementById("elMin").value;
-  alert("min:"+elMin);
   var elMax = 1*document.getElementById("elMax").value;
-  alert("max:"+elMax);
   var elStep = 1*document.getElementById('elStep').value;
-  alert("elStep:"+ elStep);
 }
-  var y=0;
-  var x=elMin;
 
-  function tabFunc(x){
-    var a=0;
-    a=Math.pow((4*x), 3) * Math.pow((Math.pow((x - 1),2)), 0.333);
-    return a;
-}
-    while (x<=elMax)
+    var y = function(x) 
     {
-    y=tabFunc(elMin, elMax, x);
-    console.log("Y(",x,") = ",y,"");
-    x=x+elStep;
+      return Math.pow((4*x), 3) * Math.pow((Math.pow((x - 1),2)), 0.333);
+    }
+    var x =elMin + elStep;
+	console.log("Табулювання функції Y(x):");
+/*1) method using 'for'*/
+  for (let x = elMin; x <= elMax; x += elStep)
+  console.log(`Y(${x}): ${y(x)}`);
+ 
+/*2) do-while
+do{
+    console.log(`Y(${x}): ${y(x)}`);
+  x=x+elStep;
 }
+while(x<=elMax);*/
+
+/*3) while
+while(x<=elMax){
+   console.log(`Y(${x}): ${y(x)}`);
+  x=x+elStep;}*/
  
   var canvas = document.getElementById('cnvs'); 
   var ctx = canvas.getContext('2d'); 
@@ -80,7 +85,8 @@ else if ( ( document.getElementById("elStep").value  == "") ){
 
   //График
   ctx.fillStyle = "red";
-  for (let i = 0; i<=canvasWidth; i++){
+  for (let i = 0; i<=canvasWidth; i++)
+  {
   const x = (i - xMiddle)/scaleX;
 
   const y =  Math.pow((4*x),3)*Math.pow(((x - 1)*(x - 1)),0.333);
